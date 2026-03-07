@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: Pull docker image
+      community.docker.docker_container:
+        name: calculator
+        image: garv09/calculator
+        state: started
+        interactive: yes
+        tty: yes
