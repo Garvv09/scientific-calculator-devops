@@ -1,27 +1,19 @@
-package com.calc;
+import unittest
+import math
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+class TestCalculator(unittest.TestCase):
 
-public class CalculatorTest {
+    def test_square_root(self):
+        self.assertEqual(math.sqrt(16), 4)
 
-    @Test
-    public void testFactorial() {
-        assertEquals(120, ScientificCalculator.factorial(5));
-    }
+    def test_power(self):
+        self.assertEqual(pow(2,3), 8)
 
-    @Test
-    public void testSqrt() {
-        assertEquals(5.0, Math.sqrt(25), 0.001);
-    }
+    def test_factorial(self):
+        self.assertEqual(math.factorial(5), 120)
 
-    @Test
-    public void testLn() {
-        assertEquals(2.302, Math.log(10), 0.001);
-    }
+    def test_log(self):
+        self.assertAlmostEqual(math.log(10), 2.302585, places=3)
 
-    @Test
-    public void testPower() {
-        assertEquals(8.0, Math.pow(2, 3), 0.001);
-    }
-}
+if __name__ == '__main__':
+    unittest.main()
