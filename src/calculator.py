@@ -1,6 +1,6 @@
 import math
 import logging
-#vivaa
+#viva
 
 # create log file
 logging.basicConfig(filename="calculator.log", level=logging.INFO)
